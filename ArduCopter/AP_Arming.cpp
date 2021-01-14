@@ -1,4 +1,5 @@
 #include "Copter.h"
+#include "Parameters.h"
 
 #if HAL_MAX_CAN_PROTOCOL_DRIVERS
  #include <AP_ToshibaCAN/AP_ToshibaCAN.h>
@@ -162,6 +163,12 @@ bool AP_Arming_Copter::parameter_checks(bool display_failure)
         if (copter.g.failsafe_gcs == FS_GCS_ENABLED_CONTINUE_MISSION) {
             // FS_GCS_ENABLE == 2 has been removed
             check_failed(ARMING_CHECK_PARAMETERS, display_failure, "FS_GCS_ENABLE=2 removed, see FS_OPTIONS");
+        }
+
+        // Parameter File Check 
+        if (copter.g.param_file_v != 258){
+            check_failed(ARMING_CHECK_PARAMETERS, display_failure,"WRONG PARAMETER FILE");
+            return false;
         }
 
         // lean angle parameter check

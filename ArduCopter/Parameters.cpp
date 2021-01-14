@@ -57,6 +57,13 @@ const AP_Param::Info Copter::var_info[] = {
     // @User: Advanced
     GSCALAR(sysid_my_gcs,   "SYSID_MYGCS",     255),
 
+    // @Param: PARAM_FILE_V
+    // @DisplayName: PARAM FILE V
+    // @Description: Parameter File Version
+    // @Range: -32768 32767
+    // @User: Advanced
+    GSCALAR(param_file_v, "PARAM_FILE_V",     PARAM_FILE_V_DEFAULT),
+
     // @Param: PILOT_THR_FILT
     // @DisplayName: Throttle filter cutoff
     // @Description: Throttle filter cutoff (Hz) - active whenever altitude control is inactive - 0 to disable
