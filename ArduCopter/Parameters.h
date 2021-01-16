@@ -379,7 +379,7 @@ public:
         // the k_param_* space is 9-bits in size
         // 511: reserved
     };
-    AP_Int16        param_file_v;            // Parameter File Version 
+    AP_Int8        param_file_v;            // Parameter File Version 
     AP_Int16        format_version;
 
     // Telemetry control

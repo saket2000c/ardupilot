@@ -167,7 +167,7 @@ bool AP_Arming_Copter::parameter_checks(bool display_failure)
 
         // Parameter File Check 
         if (copter.g.param_file_v != PARAM_FILE_V_DEFAULT){
-            check_failed(ARMING_CHECK_PARAMETERS, display_failure,"WARNING! Experimental Parameter File Found - V%d",(int8_t)PARAM_FILE_V_DEFAULT);
+            check_failed(ARMING_CHECK_PARAMETERS, display_failure,"WARNING! Experimental Parameters Found-V%d",(int8_t)copter.g.param_file_v);
             return false;
         }
 

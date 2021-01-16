@@ -60,7 +60,7 @@ const AP_Param::Info Copter::var_info[] = {
     // @Param: PARAM_FILE_V
     // @DisplayName: PARAM FILE V
     // @Description: Parameter File Version
-    // @Range: -32768 32767
+    // @Range: 1 255
     // @User: Advanced
     GSCALAR(param_file_v, "PARAM_FILE_V",     PARAM_FILE_V_DEFAULT),
 

@@ -76,7 +76,7 @@
 // Parameter File Verion
 //
 #ifndef PARAM_FILE_V_DEFAULT
- # define PARAM_FILE_V_DEFAULT      100     // default value for PARAMETER FILE VERSION
+ # define PARAM_FILE_V_DEFAULT      1    // default value for PARAMETER FILE VERSION
 #endif
 
 //////////////////////////////////////////////////////////////////////////////
