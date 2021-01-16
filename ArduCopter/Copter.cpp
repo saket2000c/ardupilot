@@ -75,7 +75,6 @@
 
 #include "Copter.h"
 
-#include "config.h"
 #include "Parameters.h"
 #define FORCE_VERSION_H_INCLUDE
 #include "version.h"
@@ -482,17 +481,11 @@ void Copter::three_hz_loop()
 // one_hz_loop - runs at 1Hz
 void Copter::one_hz_loop()
 {
-    if (!once_init){ 
-        gcs().send_text(MAV_SEVERITY_INFO, " Parameter value -> %d " ,(int16_t)g.param_file_v );
-        once_init= 1;
-    }
     if (should_log(MASK_LOG_ANY)) {
         Log_Write_Data(LogDataID::AP_STATE, ap.value);
     }
 
     arming.update();
-
-
 
     if (!motors->armed()) {
         // make it possible to change ahrs orientation at runtime during initial config
